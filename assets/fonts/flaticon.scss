@@ -1,0 +1,57 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?70eab06860b7d32c6ef8be5bb55d03bc") format("truetype"),
+url("./flaticon.woff?70eab06860b7d32c6ef8be5bb55d03bc") format("woff"),
+url("./flaticon.woff2?70eab06860b7d32c6ef8be5bb55d03bc") format("woff2"),
+url("./flaticon.eot?70eab06860b7d32c6ef8be5bb55d03bc#iefix") format("embedded-opentype"),
+url("./flaticon.svg?70eab06860b7d32c6ef8be5bb55d03bc#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "right-arrow": "\f101",
+    "left-arrow": "\f102",
+    "back": "\f103",
+    "next": "\f104",
+    "send": "\f105",
+    "left-quote": "\f106",
+    "down-chevron": "\f107",
+    "checked": "\f108",
+);
+
+.flaticon-right-arrow:before {
+    content: map-get($flaticon-map, "right-arrow");
+}
+.flaticon-left-arrow:before {
+    content: map-get($flaticon-map, "left-arrow");
+}
+.flaticon-back:before {
+    content: map-get($flaticon-map, "back");
+}
+.flaticon-next:before {
+    content: map-get($flaticon-map, "next");
+}
+.flaticon-send:before {
+    content: map-get($flaticon-map, "send");
+}
+.flaticon-left-quote:before {
+    content: map-get($flaticon-map, "left-quote");
+}
+.flaticon-down-chevron:before {
+    content: map-get($flaticon-map, "down-chevron");
+}
+.flaticon-checked:before {
+    content: map-get($flaticon-map, "checked");
+}

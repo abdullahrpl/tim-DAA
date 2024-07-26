@@ -1,0 +1,74 @@
+//cta-area
+.cta__wrapper {
+    & .section-title {
+        & .sub-title {
+            font-family: $roboto;
+            font-weight: 400;
+        }
+    } 
+    & .round-shape {
+        position: absolute;
+        width: 167px;
+        height: 167px;
+        background: #e3f3ff;
+        border-radius: 50%;
+        left: -270px;
+        z-index: 1;
+        animation: float-bob-x infinite 6s linear;
+    }
+}
+
+.cta-shape {
+    position: absolute;
+    z-index: 1;
+
+    &.shape_02 {
+        right: 145px;
+        bottom: 0;
+        animation: walking infinite 7s alternate;
+        @media #{$xl} {
+            animation: unset;
+            right: 0;
+        }
+        @media #{$laptop} {
+            animation: unset;
+            right: 0;
+        }
+        @media #{$lg} {
+            animation: unset;
+            right: 0;
+        }
+        @media #{$md} {
+            display: none;
+        }
+        @media #{$xs} {
+            display: none;
+        }
+    }
+
+    &.shape_01 {
+        left: 220px;
+        bottom: 180px;
+        z-index: 3;
+        animation: float-bob-y infinite 7s linear;
+        @media #{$md} {
+            left: 0;
+        }
+        @media #{$xs} {
+            left: 0;
+        }
+    }
+}
+
+@keyframes walking {
+    0% {
+        transform: translateX(0px);
+        
+    }
+    100% {
+        transform: translateX(-50px);
+
+    }
+}
+
+

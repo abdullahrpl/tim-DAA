@@ -1,0 +1,66 @@
+//company-statistics
+.count-shape {
+    position: absolute;
+    z-index: 1;
+    &.shape_01 {
+        left: 90px;
+        top: 30px;
+        animation: runs infinite 20s linear;
+         @media #{$md} {
+             display: none;
+         }
+
+         @media #{$xs} {
+             display: none;
+         }
+    }
+    &.shape_02 {
+        right: 214px;
+        top: -94px;
+        animation: rotation infinite 10s alternate-reverse;
+    }
+}
+
+
+.counters {
+    & h1 {
+        font-size: 50px;
+    }
+    & .semi-title {
+        @media #{$md} {
+            font-size: 24px;
+        }
+    }
+    &.count-1 {
+        & h1 {
+            color: #f94848;
+        }
+    }
+    &.count-2 {
+        & h1 {
+            color: #396bea;
+        }
+    }
+    & .semi-title {
+        font-weight: 500;
+    }
+} 
+
+
+//statistics-two
+.count-sh-02 {
+    &.shape_02 {
+        right: 97px !important;
+        top: 120px !important;
+        z-index: -1;
+    }
+}
+
+
+.count-sh-03 {
+     &.shape_02 {
+         right: 165px !important;
+         top: 81% !important;
+         z-index: -1;
+     }
+}

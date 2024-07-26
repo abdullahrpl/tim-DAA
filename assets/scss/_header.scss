@@ -1,0 +1,290 @@
+//header
+
+.main-header-area {
+	position: absolute;
+	z-index: 999;
+	left: 0;
+	right: 0;
+	& .logo-img {
+		& img {
+			max-width: 100%;
+		}
+	}
+	@media #{$laptop} {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@media #{$lg} {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	@media #{$md} {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	@media #{$xs} {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+
+	&.sticky {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+.main-menu {
+	@include transition(.4s);
+	@media #{$lg} {
+		margin: 0;
+	}
+	& ul {
+		& li {
+			display: inline-block;
+			position: relative;
+			margin-right: 50px;
+			@media #{$xl} {
+				margin-right: 25px;
+			}
+			@media #{$laptop} {
+				margin-right: 25px;
+			}
+			@media #{$lg} {
+				margin-right: 13px;
+			}
+			& > a {
+				color: $heding;
+				font-size: 20px;
+				line-height: 1;
+				font-family: $roboto;
+				padding: 40px 0;
+				display: inline-block;
+				position: relative;
+				font-weight: 400;
+				& span {
+					@include transition(.3s);
+					&.badge {
+						padding: 0.15em 0.2em;
+						font-size: 60%;
+						font-weight: 400;
+						text-transform: initial;
+					}
+				}
+				& i {
+					font-size: 14px;
+					line-height: 1;
+				}
+				&.active  {
+					color:$theme-color;
+				}
+			}
+			&:hover{
+				& > a {
+					color:$theme-color !important;
+					& span {
+						background: $theme-color;
+					}
+				}
+			}
+			& ul.submenu {
+				background: $white  none repeat scroll 0 0;
+				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+				left: 0;
+				opacity: 0;
+				position: absolute;
+				top: 119%;
+				transition: all 0.3s ease 0s;
+				visibility: hidden;
+				width: 240px;
+				z-index: 9;
+				border-top: 4px solid $theme-color;
+				text-align: left;
+				padding: 25px 0;
+				& li {
+					display: block;
+					& a {
+						padding: 14px 30px;
+						display: block;
+						margin:0;
+						border:0;
+						color:$heding;
+						&::before {
+							display: none;
+						}
+					}
+				}
+			}
+			&:hover {
+				& .submenu {
+					top:100%;
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+//sticky-menu
+.sticky {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	background: $white;
+	top: 0;
+	animation:300ms ease-in-out 0s normal none 1 running fadeInDown;
+	@include transition(.4s);
+	box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+	& .logo {
+		transform: translateY(2px);
+	}
+	& .hamburger-menu {
+		top: 17px;
+		@media #{$md} {
+			top: 35px;
+		}
+	}
+}
+/* Hamburger-menu */
+.hamburger-menu {
+	display: inline-block;
+	& > a {
+		display: inline-block;
+		font-size: 25px;
+		color:$theme-color;
+	}
+}
+.side-mobile-menu {
+	display: none;
+	@media #{$md} {
+		display: block;
+	}
+	@media #{$xs} {
+		display: block;
+	}
+	@media #{$sm} {
+		display: block;
+	}
+}
+
+.offset-sidebar {
+	display: block;
+	margin-top: 30px;
+	@media #{$md} {
+		display: none;
+	}
+	@media #{$xs} {
+		display: none;
+	}
+	@media #{$sm} {
+		display: none;
+	}
+}
+
+
+.right-nav {
+	& ul {
+		& li {
+			display: inline-flex;
+			align-items: center;
+		}
+	}
+	& .quote_btn {
+		padding: 20px 35px;
+	}
+	& .sign-in {
+		color: $heding;
+		font-size: 20px;
+	}
+}
+
+
+
+//main-head-two 
+.header-widget {
+	& .dropdown-menu {
+		min-width: 170px;
+		padding: 10px 0;
+		background: #fff;
+		box-shadow: 0px 25px 50px 0px rgba(213, 216, 223, 0.5);
+		border: 1px solid #f8f8f8;
+		border-radius: 0;
+		top: 20px;
+
+		@media #{$xs} and (orientation:landscape) {
+			top: 165px !important;
+		}
+
+		& ul {
+			& li {
+				& a {
+					display: block;
+					padding: 0 15px;
+					font-size: 15px;
+					color: #767a89;
+					line-height: 35px;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
+
+.language-switcher {
+	margin-left: 30px;
+	& button {
+		color: $black;
+		font-size: 18px;
+		border: 0;
+		background: transparent;
+		padding: 0;
+		cursor: pointer;
+
+		&::after {
+			display: none;
+		}
+	}
+
+}
+
+
+.main-head-two {
+	top: 38px;
+	& ul {
+		li {
+			@media #{$laptop} {
+				margin-right: 14px;
+			}
+		}
+	} 
+	&.sticky {
+		top: 0;
+	}
+}
+
+.main-menu-bg {
+	border-radius: 40px;
+	padding-left: 25px;
+	padding-right: 25px;
+	@media #{$xs} {
+		padding-left: 0;
+		padding-right: 0;
+		background: transparent;
+	}
+}
+
+.right-nav-2 {
+	 .quote_btn {
+		background: $orange !important;
+		&:hover {
+			background: $theme-color !important;
+		}
+		@media #{$laptop} {
+			display: none;
+		}
+		@media #{$lg} {
+			display: none;
+		}
+	}
+}

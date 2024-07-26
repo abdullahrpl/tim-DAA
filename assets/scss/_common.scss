@@ -1,0 +1,615 @@
+/*----------------------------------------*/
+/*  01. Theme default CSS
+/*----------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+//custom-fonts
+@font-face {
+	font-family: 'gloss_and_bloomregular';
+	src: url('../fonts/gloss_and_bloom.woff2') format('woff2'),
+		url('../fonts/gloss_and_bloom.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+/* 1. Theme default css */
+
+
+
+
+ body {
+	font-family: $roboto;
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 400;
+    font-style: normal;
+    color:$body-text-color;
+}
+// .img,img {
+// 	max-width: 100%;
+// 	@include transition(.3s);
+// }
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.fix {
+	overflow: hidden
+}
+a,
+.button {
+	@include transition(.3s);
+}
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+a:focus,
+a:hover
+{
+	color: inherit;
+	text-decoration: none;
+}
+a,
+button {
+	color: inherit;
+	outline: medium none;
+}
+button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $barlow;
+	color: $heding;
+	line-height: 1.1;
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 700;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 40px;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+p {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 28px;
+	font-family: $roboto;
+	color: $body-text-color;
+	margin-bottom: 0;
+}
+hr {
+	border-bottom: 1px solid $hr-border-color;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+*::-moz-selection {
+	background: $black;
+	color: $white;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: $black;
+	color:$white;
+	text-shadow: none;
+}
+::selection {
+	background: $black;
+	color: $white;
+	text-shadow: none;
+}
+
+/*--
+    - Input Placeholder
+-----------------------------------------*/
+*::-moz-placeholder {
+	color: $black;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: $black;
+	font-size: 14px;
+	opacity: 1;
+}
+
+
+/*--
+    - position Classes
+-----------------------------------------*/
+.pos-rel {
+	position: relative;
+}
+.pos-abl {
+	position: absolute;
+}
+/*--
+    - Common Classes
+-----------------------------------------*/
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+
+/*--
+    - Background color
+-----------------------------------------*/
+.black-soft-bg {
+	background: #151524;
+}
+.grey-bg {
+	background: $grey;
+}
+.grey-bg-fot {
+	background: #F6F6FE;
+}
+.grey-bg-soft {
+	background: #F3F7FC;
+}
+.grey-bg-soft-2 {
+	background: #E8EFFF;
+}
+.grey-bg-soft-3 {
+	background: #F8F8FF;
+}
+
+.white-bg {
+	background:$white;
+}
+.black-bg {
+	background: $black;
+}
+.yellow-soft-bg {
+	background: $yellow-soft;
+}
+.yellow-soft-bg-2 {
+	background: $yellow-soft-2;
+}
+.grey-yellow-bg {
+	background: $grey-yellow-soft;
+}
+
+.heding-bg {
+	background: $heding;
+}
+.theme-bg {
+	background: $theme-color;
+}
+.theme-soft-bg {
+	background: rgb(103, 103, 254);
+	;
+}
+
+.gradient-gray {
+	 background-image: -moz-linear-gradient(90deg, rgb(248, 249, 254) 0%, rgba(255, 255, 255, 0) 100%);
+	 background-image: -webkit-linear-gradient(90deg, rgb(248, 249, 254) 0%, rgba(255, 255, 255, 0) 100%);
+	 background-image: -ms-linear-gradient(90deg, rgb(248, 249, 254) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+// .primary-bg {
+// 	background: #222;
+// }
+
+/*--
+    - color
+-----------------------------------------*/
+.white-color {
+	color: $white;
+}
+.black-color {
+	color: $black;
+}
+.theme-color {
+	color: $theme-color;
+}
+// .primary-color {
+// 	color: #222;
+// }
+.pad-bottom-sm {
+	@media #{$sm} {
+		padding-bottom: 100px;
+	}
+}
+
+
+//left-line
+.left-line {
+	position: relative;
+	&::before {
+		content: "";
+		background: $white;
+		position: absolute;
+		left: 0;
+		top: 10px;
+		width: 50px;
+		height: 2px;
+		z-index: 1;	  
+	}
+}
+
+  
+
+/*--
+section-title
+----------------------------------------*/
+.section-title {
+	position: relative;
+	z-index: 2;
+	& h3 {
+		font-size: 24px;
+		color: #5353f8;
+	}
+	& h2 {
+		font-size: 60px;
+		line-height: 1.2;
+		position: relative;
+		z-index: 1;
+		@media #{$lg} {
+			font-size: 45px !important;
+		}
+
+		@media #{$md} {
+			font-size: 35px !important;
+		}
+
+		@media #{$xs} {
+			font-size: 30px !important;
+		}
+	}
+	& .sub-title {
+		font-weight: 500;
+	}
+	& h5 {
+		color: rgba(0, 1, 8, 0.9);
+		font-size: 20px;
+		font-family: $roboto;
+		font-weight: 400;
+		line-height: 1.6;
+	}
+} 
+
+
+.vector-shape {
+	position: relative;
+	display: inline-block;
+	&::before {
+		position: absolute;
+		content: '';
+		left: 0;
+		right: 0;
+		top:85%;
+		background: url(../img/shape/02.png) no-repeat;
+		width: 100%;
+		height: 18px;
+		z-index: -1;
+
+		@media #{$lg} {
+			display: none;
+		}
+
+		@media #{$md} {
+			display: none;
+		}
+
+		@media #{$xs} {
+			display: none;
+		}
+	}
+}
+
+.sub-title {
+	color: #000009;
+	font-size: 24px;
+	font-family: $roboto;
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+
+.semi-title {
+	font-size: 28px;
+	font-weight: 600;
+}
+
+.section-title-2 {
+	& h5 {
+		color: $orange;
+		font-family: $roboto;
+		font-weight: 400;
+	}
+	& h2 {
+		font-size: 36px;
+		@media #{$md} {
+			font-size: 30px !important;
+		}
+		@media #{$xs} {
+			font-size: 30px !important;
+		}
+	}
+	& .sub-title {
+		font-weight: 400;
+	}
+}
+
+
+.section-title-3 {
+	& h2 {
+		font-size: 45px;
+	}
+} 
+//overlay-bg
+.skew-bg {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	&::before {
+		top: 0px;
+		transform: skew(45deg) scaleX(0);
+		width: 160%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		bottom: 0;
+		content: "";
+		position: absolute;
+		border-radius: 0;
+		transition: all 0.3s ease-in-out;
+	}
+
+	&::after {
+		top: 0px;
+		transform: skew(45deg) scaleX(0);
+		width: 160%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		bottom: 0;
+		content: "";
+		position: absolute;
+		border-radius: 0;
+		transition: all 0.3s ease-in-out;
+	}
+}
+
+.swipe-right {
+	position: relative;
+	z-index: 1;
+	&::before {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 100%;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+		@include transition(.3s);
+	}
+}
+
+.round-eclipse {
+	position: relative;
+	z-index: 1;
+	&::before {
+		border-radius: 50%;
+		background-color: rgb(245, 245, 252);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 72px;
+		height: 72px;
+		z-index: -1;
+	}
+}
+  
+//video-icon
+.popup-video {
+	color: $white;
+	background: $theme-color;
+	border-radius: 50%;
+	font-size: 14px;
+	line-height: 100px;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	-webkit-transition: all 0.4s ease-out 0s;
+	-moz-transition: all 0.4s ease-out 0s;
+	-ms-transition: all 0.4s ease-out 0s;
+	-o-transition: all 0.4s ease-out 0s;
+	transition: all 0.4s ease-out 0s;
+	position: relative;
+	z-index: 1;
+	animation: pulseBig infinite 5s linear;
+	&:hover {
+		color: $white;
+		background: $theme-color;
+	}
+}
+
+/*--
+    - Margin & Padding
+-----------------------------------------*/
+/*-- Margin Top --*/
+// @for $i from 1 through 80 {
+//     .mt-#{5 * $i}{margin-top: 5px * $i;}
+// }
+
+// /*-- Margin Bottom --*/
+// @for $i from 1 through 80 {
+//     .mb-#{5 * $i}{margin-bottom: 5px *$i;}
+// }
+// /*-- Margin Left --*/
+// @for $i from 1 through 80 {
+//     .ml-#{5 * $i}{margin-left: 5px * $i;}
+// }
+
+// /*-- Margin Right --*/
+// @for $i from 1 through 80 {
+//     .mr-#{5 * $i}{margin-right: 5px *$i;}
+// }
+
+// /*-- Padding Top --*/
+// @for $i from 1 through 80 {
+//     .pt-#{5 * $i}{padding-top: 5px *$i;}
+// }
+
+// /*-- Padding Bottom --*/
+// @for $i from 1 through 80 {
+//     .pb-#{5 * $i}{padding-bottom: 5px *$i;}
+// }
+
+// /*-- Padding Left --*/
+// @for $i from 1 through 80 {
+//     .pl-#{5 * $i}{padding-left: 5px *$i;}
+// }
+
+// /*-- Padding Right --*/
+// @for $i from 1 through 80 {
+//     .pr-#{5 * $i}{padding-right: 5px *$i;}
+// }
+
+
+// others common css here :)
+
+.dark #preloader {
+	background-color: #232323;
+}
+
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #f7f7f7;
+	z-index: 999999;
+}
+
+.preloader {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	padding: 0px;
+	text-align: left;
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -25px;
+}
+
+.preloader span {
+	position: absolute;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: $theme-color;
+	-webkit-animation: preloader 1.3s linear infinite;
+	animation: preloader 1.3s linear infinite;
+}
+
+.preloader span:last-child {
+	animation-delay: -0.8s;
+	-webkit-animation-delay: -0.8s;
+}
+
+@keyframes preloader {
+	0% {
+		transform: scale(0, 0);
+		opacity: 0.5;
+	}
+
+	100% {
+		transform: scale(1, 1);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes preloader {
+	0% {
+		-webkit-transform: scale(0, 0);
+		opacity: 0.5;
+	}
+
+	100% {
+		-webkit-transform: scale(1, 1);
+		opacity: 0;
+	}
+}
+//scrollup
+#scrollUp {
+	background: $theme-color;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+	border-radius: 50%;
+	line-height: 50px;
+	text-align: center;
+	& i {
+		color: $white;
+	}
+}
+//animation
+

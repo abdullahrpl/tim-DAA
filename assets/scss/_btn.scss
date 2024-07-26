@@ -1,0 +1,54 @@
+/*--
+	-theme-btn
+----------------------------------------*/
+.theme_btn {
+    overflow: hidden;
+    color: $white;
+    background: $theme-color;
+    font-size: 20px;
+    font-family: $roboto;
+    font-weight: 400;
+    line-height: 1;
+    padding: 22px 60px 22px 60px;
+    display: inline-block;
+    border-radius: 40px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        color: $white;
+        background: $orange;
+    }
+}
+
+
+
+//border-btn
+.border_btn {
+    background: transparent;
+    border: 2px solid $heding;
+    color: $heding;
+    border-radius: 35px;
+    padding: 10px ​38px !important;
+    @include transition(.3s);
+    &:hover, &.active {
+        color: $white;
+        background-color: $heding;
+        border-color: $heding;
+    }
+    &.active {
+        &:hover {
+            background: transparent;
+            border: 2px solid $black;
+            color: $black;
+        }
+    }
+}
+
+//theme_black_btn
+.theme_black_btn {
+    background: $heding;
+    padding: 18px 37px;
+}
+

@@ -1,0 +1,446 @@
+//intro-area
+.intro-box {
+    border-radius: 5px;
+    background-color: rgb(239, 240, 251);
+    padding: 60px 45px 46px 45px;
+    @include transition(.3s);
+    @media #{$lg} {
+        padding: 60px 20px 46px 20px;
+    }
+    @media #{$xs} {
+        padding: 60px 15px 46px 15px;
+    }
+    & h5 {
+        color: rgba(0, 1, 8, 0.8);
+        font-size: 20px;
+        font-weight: 500;
+    }
+    & h3 {
+        color: #000108;
+        font-weight: 600;
+        line-height: 1.4;
+        @media #{$lg} {
+            font-size: 25px;
+        }
+        @media #{$md} {
+            font-size: 25px;
+        }
+    }
+    & .intro-btn {
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgb(191, 196, 251);
+            display: inline-block;
+            width: 37px;
+            height: 37px;
+            left: 0;
+            top: -9px;
+            z-index: -1;
+            @include transition(.3s);
+        }
+    }
+    &:hover {
+        transform: translateY(-30px);
+        & .intro-btn {
+            &::before {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+.ibox-2 {
+    background-color: rgb(251, 239, 240);
+    & .intro-btn {
+        &::before {
+            background-color: rgb(252, 190, 195);
+        }
+    }
+}
+.ibox-3 {
+    background-color: rgb(239, 251, 241);
+    & .intro-btn {
+        &::before {
+            background-color: rgb(204, 241, 210);
+        }
+    }
+}
+
+//sdot-services
+.sdot-services {
+    z-index: 1;
+}
+.services-shape {
+    position: absolute;
+    z-index: 2;
+    &.shape_01 {
+        left: 96px;
+        top: 130px;
+        animation: rotation infinite 4s alternate;
+        @media #{$md} {
+            display: none;
+        }
+        @media #{$xs} {
+            display: none;
+        }
+    }
+
+    &.shape_02 {
+        right: 205px;
+        top: 130px;
+
+        @media #{$md} {
+            display: none;
+        }
+
+        @media #{$xs} {
+            display: none;
+        }
+    }
+    &.shape_03 {
+        width: 100%;
+        &::before {
+            content: '';
+            border-radius: 50%;
+            background-color: rgb(251, 117, 117);
+            position: absolute;
+            right: 34%;
+            top: -93px;
+            width: 6px;
+            height: 6px;
+            z-index: 1;
+        }
+    }
+    &.shape_04 {
+        width: 100%;
+        animation: float-bob-y infinite 4s alternate;
+        @media #{$md} {
+            display: none;
+        }
+
+        @media #{$xl} {
+            display: none !important;
+        }
+        &::before {
+            content: '';
+            border-radius: 50%;
+            background-color: rgb(251, 117, 117);
+            position: absolute;
+            left: 10%;
+            bottom: 0;
+            width: 6px;
+            height: 6px;
+             z-index: -1;
+        }
+        &::after {
+            content: '';
+            border-radius: 50%;
+            background-color: rgb(252, 205, 176);
+            position: absolute;
+            right: -55px;
+            top: 0;
+            width: 37px;
+            height: 37px;
+            z-index: -1;
+            @media #{$laptop} {
+                right: 0;
+            }
+            @media #{$lg} {
+                right: 0;
+            }
+
+        }
+    }
+}
+.s-services {
+    background-color: rgb(255, 241, 232);
+    padding: 60px 35px 48px 35px;
+    position: relative;
+    z-index: 2;
+     @include transition(.3s);
+      @media #{$laptop} {
+          padding: 60px 15px 48px 15px;
+      }
+      @media #{$xs} {
+          padding: 60px 15px 48px 15px;
+      }
+    &__icon{
+        display: inline-block;
+        @include transition(.3s);
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: '';
+            border-radius: 50%;
+            background-color: rgb(245, 245, 252);
+            position: absolute;
+            left: 0;
+            top: 24px;
+            width: 72px;
+            height: 72px;
+            z-index: -1;
+            @include transition(.3s);
+        }
+    }
+
+    & p {
+        color: rgba(0, 1, 8, 0.8);
+    }
+    & h3 {
+        font-weight: 600;
+        line-height: 1.3;
+        @media #{$laptop} {
+            font-size: 24px;
+        }
+        @media #{$xs} {
+            font-size: 25px;
+        }
+    }
+    &:hover {
+        transform: translateY(-10px);
+        &::before {
+            background: $white;
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+        & .s-services__icon {
+            &::before {
+                transform: scale(0.5);
+            }
+        }
+    }
+} 
+
+
+//intro-card-area-two
+.intro-card-area {
+   & .data-shape  { 
+         &.shape_01 {
+             left: 132px;
+             top: 26%;
+             animation: zoomIn infinite 9s alternate;
+             @media #{$md} {
+                 display: none;
+             }
+
+             @media #{$xs} {
+                 display: none;
+             }
+         }
+    }
+}
+.intro-shape {
+    position: absolute;
+    z-index: 1;
+    &.shape_02 {
+        right: 10%;
+        top: 33%;
+        animation: animationFramesThree infinite 10s linear;
+        @media #{$laptop} {
+            display: none;
+        }
+        @media #{$lg} {
+            display: none;
+        }
+        @media #{$md} {
+            display: none;
+        }
+        @media #{$xs} {
+            display: none;
+        }
+    }
+    &.shape_03 {
+        right: 9%;
+        top: 79%;
+         @media #{$md} {
+             display: none;
+         }
+
+         @media #{$xs} {
+             display: none;
+         }
+    }
+}
+.intro-v-shape {
+    &::before {
+        top: 78%;
+        background: url(../img/line-shape/2b.svg) no-repeat;
+        height: 126px;
+        transform: rotate(90deg);
+    }
+}
+
+.intro-02__ai {
+    position: relative;
+    @include transition(.3s);
+    height: 251px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: $heding;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        left: 0;
+        top: 22px;
+        z-index: 1;
+        animation: zoomIncolor infinite 10s linear;
+         @media #{$xs} {
+             animation: unset;
+         }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        background: $heding;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        right: -22px;
+        bottom: 22px;
+        z-index: 1;
+        animation: zoomIncolor infinite 10s linear;
+        @media #{$xs} {
+            animation: unset;
+        }
+    }
+}
+
+.intro-02 {
+    background: transparent;
+    border: 1px solid $heding;
+    border-radius: 5px;
+   & .intro-btn {
+        @include transition(.3s);
+    }
+   & .intro-02__ai {
+       height: 0;
+       opacity: 0;
+       visibility: hidden;
+       @include transition(.3s);
+       @media #{$xs} {
+           height: 100%;
+           visibility: visible;
+           opacity: 1;
+       }
+       & img {
+           @media #{$xs} {
+               width: 100%;
+           }
+       }
+    }
+    & .intro-btn {
+        &::before {
+            background-color: #FBF4EE;
+            left: auto;
+            right: -13px;
+            top: -7px;
+        }
+    } 
+    &:hover {
+        & .intro-btn {
+            display: inline-block;
+            opacity: 0;
+            visibility: hidden;
+        }
+       & .intro-02__ai {
+           height: 251px;
+           opacity: 1;
+           visibility: visible;
+        }
+    }
+    &.active {
+        border: 1px solid $heding;
+        border-radius: 5px;
+        & .intro-btn {
+            opacity: 0;
+            visibility: hidden;
+        }
+        & .intro-02__ai {
+            height: 251px;
+            display: inline-block;
+            opacity: 1;
+            visibility: visible;
+            @include transition(.3s);
+            & img {
+                @media #{$xs} {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+//s-services-02
+.sdot-bottom-shape {
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        background:url(../img/shape/17.svg) no-repeat;
+        left: 0;
+        bottom: -30px;
+        width: 100%;
+        height: 59px;
+        z-index: 1;
+    }
+}
+.s-serv-shape {
+    &::before {
+        background:url(../img/line-shape/2c.svg) no-repeat;
+        top: 78%;
+    }
+}
+.s-services-02 {
+    background: transparent;
+    padding:70px 35px 48px 35px;
+    @media #{$lg} {
+         padding:70px 15px 48px 15px;
+    }
+    @media #{$md} {
+         padding:70px 25px 48px 25px;
+    }
+    @media #{$xs} {
+         padding:70px 15px 48px 15px;
+    }
+    & .s-services__icon {
+        &::before {
+            background: #FEF8F8;
+        }
+    }
+   & h3 {
+       @media #{$lg} {
+          font-size: 25px; 
+       }
+       
+   }
+    & .long-arrow {
+        display: inline-block;
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+    &:hover {
+        & .s-services__icon {
+            &::before {
+                background: #F2F2FB;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

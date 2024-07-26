@@ -1,0 +1,206 @@
+//how-it-work
+
+.works__img {
+    & .work_ai {
+        animation: float-bob-y infinite 5s linear;
+    }
+    & .dot-shape {
+        position: absolute;
+        bottom: 33px;
+        right: 37px;
+        z-index: 1;
+        animation: float-bob-y infinite 3s alternate;
+    }
+}
+.shape-arrow-1 {
+    right: 54px;
+    top: 41%;
+    position: absolute;
+    transform: rotate(110deg);
+    z-index: 2;
+}
+
+.s-works {
+    background-color: rgb(252, 252, 252);
+    box-shadow: 0px 0px 90px 0px rgba(185, 187, 196, 0.45);
+    padding: 45px 30px 53px 40px;
+    position: relative;
+    z-index: 1;
+    @media #{$laptop} {
+        padding: 45px 15px 53px 15px;
+    }
+    @media #{$xs} {
+        padding: 45px 15px 53px 15px;
+    }
+   & .shape-arrow {
+        position: absolute;
+        top: -114px;
+        right: -13px;
+        z-index: 1;
+        @media #{$xs} {
+            display: none;
+        }
+    }
+ 
+    &__icon {
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: '';
+            border-radius: 10px;
+            background-color: rgb(248, 244, 244);
+            position: absolute;
+            left: -6px;
+            top: 14px;
+            width: 77px;
+            height: 75px;
+            z-index: -1;
+        }
+    }
+    & h5 {
+        font-size: 20px;
+        font-weight: 400;
+        font-family: $roboto;
+        line-height: 1.6;
+    }
+} 
+
+//work-vec-shape
+
+.work-shape {
+    position: absolute;
+    z-index: 1;
+    &.shape_01 {
+        left: 16%;
+        top: 10%;
+        animation: rotation infinite 8s linear;
+    }
+    &.shape_02 {
+        left: 95px;
+        bottom: 6%;
+        animation: rotation infinite 5s linear;
+    }
+    &.shape_03 {
+        right: 10%;
+        top: 26%;
+        animation: rotation infinite 7s linear;
+    }
+} 
+.work-vec-shape {
+    &::before {
+        background: url(../img/line-shape/2d.svg) no-repeat;
+        top: 80%;
+        left: 11px;
+        height: 20px;
+    }
+}
+
+.shape-down-arrow {
+    position: absolute;
+    right: -99px;
+    bottom: 55px;
+    animation: float-bob-y infinite 10s linear;
+    z-index: 1;
+}
+
+.shape-down-arrow-2 {
+    position: absolute;
+    top: 35px;
+    right: -87px;
+    transform: rotate(70deg);
+    z-index: 1;
+}
+
+.s-works-row {
+    & .col-xl-4 {
+        &:nth-child(1) {
+            & .s-works {
+                transform: translateY(70px);
+                @media #{$md} {
+                    transform: translateY(0);
+                }
+                @media #{$xs} {
+                    transform: translateY(0);
+                }
+            }
+        }
+        &:last-child {
+            & .s-works {
+                transform: translateY(70px);
+                @media #{$md} {
+                    transform: translateY(0);
+                }
+
+                @media #{$xs} {
+                    transform: translateY(0);
+                }
+            }
+        }
+        & .s-works {
+            background: #fcfcfc;
+            box-shadow: 0px 0px 90px rgba(185, 187, 196, 0.45);
+            @include transition(.3s);
+            &:hover {
+                transform: translateY(0);
+            }
+        }
+    }
+    & .s-works {
+        @media #{$lg} {
+            padding: 45px 15px 53px 15px;
+        }
+        @media #{$lg} {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @media #{$md} {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @media #{$xs} {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+
+
+
+
+//digital-vision
+
+.vision__img__wrapper {
+    & .vision-img {
+        margin-left: -103px;
+        animation: float-bob-y infinite 5s reverse;
+        @media #{$lg} {
+            margin-left: 0;
+        }
+        @media #{$md} {
+            margin-left: 0;
+        }
+        @media #{$xs} {
+            margin-left: 0;
+        }
+    }
+    & .dot-shape {
+        position: absolute;
+        bottom: -90px;
+        left: -200px;
+        animation: rotation infinite 5s alternate-reverse;
+    }
+}
+.digi-vec-shape {
+    &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        top: 81%;
+        background: url(../img/line-shape/2e.svg) no-repeat;
+        width: 100%;
+        height: 18px;
+        z-index: -1;
+    }
+} 
